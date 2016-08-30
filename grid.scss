@@ -1,0 +1,45 @@
+// GRID SYSTÉM
+// -----------
+// * g-radek -> řádek, ve kterém jsou umístěné sloupce, maximální počet sloupců je 12
+// * syntaxe sloupců: sl-/sirka/ (např.: sl-6) -> polovina 100%
+
+$mezera: 20px;
+$mezera_posledni: 0px;
+
+.g-radek{
+  position: relative;
+  margin-bottom: $mezera;
+  display: table;
+  width: 100%;
+}
+
+@for $i from 1 through 12 {
+  .sl-#{$i} {
+    margin-right: $mezera;
+    width: calc( ((100% / 12) * #{$i}) - 14px);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+  }
+  .sl-#{$i}:last-child {
+    margin-right: $mezera_posledni;
+    width: calc( (((100% / 12) * #{$i}) - 2px) - 11px ); //KVŮLI BORDERU
+  }
+  @media screen and (max-width: 767px){
+    .sl-#{$i}, .sl-#{$i}:last-child{
+      float: none;
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: $mezera;
+    }
+    .g-radek{
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+
