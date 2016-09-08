@@ -7,6 +7,7 @@ $mezera: 20px;
 $mezera_posledni: 0px;
 
 .g-radek{
+  box-sizing: border-box;
   position: relative;
   margin-bottom: $mezera;
   display: table;
