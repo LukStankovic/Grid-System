@@ -17,7 +17,7 @@ $mezera_posledni: 0px;
 @for $i from 1 through 12 {
   .sl-#{$i} {
     margin-right: $mezera;
-    width: calc( ((100% / 12) * #{$i}) - 14px);
+    width: calc( ((100% / 12) * #{$i}) - 19px);
     float: left;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
