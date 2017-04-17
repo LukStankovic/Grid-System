@@ -39,6 +39,7 @@ $scr-lg-min: 1200px;
     margin-right: $mezera;
     width: calc( ((100% / 12) * #{$i}) - 19px);
     float: left;
+    text-align: left;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -52,6 +53,7 @@ $scr-lg-min: 1200px;
   @media screen and (max-width: $scr-xs-max){
     .sl-#{$i}, .sl-#{$i}:last-child{
       float: none;
+      text-align: left;
       width: 100%;
       margin-right: 0;
       margin-bottom: $mezera;
